@@ -1,0 +1,29 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Pedra, Papel e Tesoura</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-container text-center">
+            <h1>Jogo de Pedra, Papel e Tesoura</h1>
+            <div class="choices">
+                <button onclick="fazerEscolha('pedra')" class="btn btn-primary">🗿🍷 Pedra</button>
+                <button onclick="fazerEscolha('papel')" class="btn btn-primary">🧻 Papel</button>
+                <button onclick="fazerEscolha('tesoura')" class="btn btn-primary">✂️ Tesoura</button>
+            </div>
+            <div id="result" class="result"></div>
+            <div id="score" class="result">
+                <p>Vitórias do Usuário: <span id="vitoriasUsuario">0</span></p>
+                <p>Vitórias do Computador: <span id="vitoriasPc">0</span></p>
+            </div>
+            <button onclick="resetarJogo()" class="btn btn-secondary">Reiniciar Jogo</button>
+            <div id="media" class="media mt-3 w-100"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

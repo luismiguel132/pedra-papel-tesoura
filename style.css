@@ -1,0 +1,22 @@
+.game-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.choices button {
+    margin: 10px;
+}
+.result {
+    margin-top: 20px;
+}
+.media {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+body {
+    background-color: rgb(53, 184, 143);
+}
