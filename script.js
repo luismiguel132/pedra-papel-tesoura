@@ -3,10 +3,10 @@
 // [x] O usuário pode escolher entre Pedra, Papel e Tesoura.
 // [x] O computador faz uma escolha aleatória.
 // [x] O jogo determina o vencedor da rodada.
-// [ ] O jogo exibe o resultado da rodada e atualiza o contador de vitórias.
-// [ ] O jogo pode ser reiniciado.
+// [x] O jogo exibe o resultado da rodada e atualiza o contador de vitórias.
+// [x] O jogo pode ser reiniciado.
 // [x] Aplicar o alert do Bootstrap invés do windowAlert
-// [ ] media de vitorias do computador e usuario
+// [x] media de vitorias do computador e usuario
 
 var vitoriasUsuario = 0;
 var vitoriasPc = 0;
@@ -66,8 +66,15 @@ function media(){
   var media = totalVitoriasUsuario/rodadas
   var mediaFixada = media.toFixed(2)
 
-  if(rodadas >= 2) {
-    document.getElementById("media").innerHTML = `<div class="media alert alert-dark"> Em ${rodadas} rodadas a sua média de vitórias é: ${mediaFixada}</div>`
+  if (rodadas >= 2) {
+    const mediaDiv = document.getElementById('media');
+    mediaDiv.innerHTML = ''; 
+  
+    const alertDiv = document.createElement('div');
+    alertDiv.className = 'media alert alert-dark';
+    alertDiv.innerHTML = `Em ${rodadas} rodadas a sua média de vitórias é: ${mediaFixada}`;
+  
+    mediaDiv.appendChild(alertDiv);
   }
 }
 
